@@ -9,12 +9,21 @@ while error_catch == True:
 #error catching
     try:
         guess = int(input("Guess a number between 1 and 10\n"))
-        if guess == number:
-            error_catch = False
-        elif guess >number:
-            print("Your guess is to high, guess lower")
+        if guess in range (1,10):
+            if guess == number:
+                error_catch = False
+            
+            elif guess >number:
+                print("Your guess is to high, guess lower")
+            else:
+                print("Your guess is to low, guess higher")
         else:
-            print("Your guess is to low, guess higher")
+            print("Out of range")
+              
+                
+            
+
+            
             
     except:
         print("Error,Invalid number")
